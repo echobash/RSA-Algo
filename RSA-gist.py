@@ -2,7 +2,7 @@
 """
 Created on Tue Nov  6 17:30:18 2018
 
-@author: Rishi
+
 """
 #let p,q be two random prime nos.
 p = 37
