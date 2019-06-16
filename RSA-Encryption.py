@@ -1,7 +1,5 @@
 from math import sqrt
-#required for the sqrt() function, if you want to avoid doing **0.5
 import random
-#required for randrange
 from random import randint as rand
 
 
@@ -33,22 +31,22 @@ def isprime(n):
     return True
 
 
-#initial two random numbers p,q
+
 p = rand(1, 1000)
 q = rand(1, 1000)
 
 
 def generate_keypair(p, q, keysize):
-    # keysize is the bit length of n so it must be in range(nMin,nMax+1).
+    # Here, keysize is the bit length of n so it must be in range(nMin,nMax+1).
     # << is bitwise operator
     # x << y is same as multiplying x by 2**y
-    # i am doing this so that p and q values have similar bit-length.
-    # this will generate an n value that's hard to factorize into p and q.
+    # This is does as p and q have similar values of bit-length.
+    # This will generate an n value that's hard to factorize into p and q.
 
     nMin = 1 << (keysize - 1)
     nMax = (1 << keysize) - 1
     primes = [2]
-    # we choose two prime numbers in range(start, stop) so that the difference of bit lengths is at most 2.
+    # Two prime numbers in range(start, stop) have to be chosen so that the difference of bit lengths is at most 2.
     start = 1 << (keysize // 2 - 1)
     stop = 1 << (keysize // 2 + 1)
 
@@ -112,7 +110,7 @@ def decrypt(msg_ciphertext, package):
     return (''.join(msg_plaintext))
 
 
-#-------------------------------------------------------------
+#--------------------x----------------WAIT---FOR--THE--END--------
 #driver program
 if __name__ == "__main__":
     bit_length = int(input("Enter bit_length: "))
