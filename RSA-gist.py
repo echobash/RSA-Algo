@@ -8,7 +8,7 @@ Created on Tue Nov  6 17:30:18 2018
 p = 37
 q = 79
 N=p*q
-phiN=(p-1)*(q-1)
+phiN=(p-1)*(q-1) #This calculates the totient
 e=5       #Satisfying the condition gcd(e,phiN)=1
 k=3       #This value of k returns an integer for d. Found by plugging values from 0 to n where k belongs to Z(trial&error)
 d=(1+(k*phiN))/5
